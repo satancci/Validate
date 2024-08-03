@@ -18,12 +18,12 @@ class cpf:
         if len(cpf) != 14 and len(cpf) != 11:
             return print('Erro: CPF com tamanho inválido.') 
         cpf = cpf.replace('.', '').replace('-', '') if len(cpf) == 14 else cpf
-        penultimo = cls.digito(cls.soma(cpf)%11)
-        ultimo = cls.digito((cls.soma(cpf, 1) + penultimo*2)%11)
+        penultimo = cls.__digito(cls.__soma(cpf)%11)
+        ultimo = cls.__digito((cls.__soma(cpf, 1) + penultimo*2)%11)
         return True if cpf[9] + cpf[10] == f'{penultimo}{ultimo}' else False
-    def digito(vare):
+    def __digito(vare):
         return 11-vare if vare >= 2 else 0
-    def soma(cpf, add=0):
+    def __soma(cpf, add=0):
         return sum(int(cpf[i])*(10+add-i) for i in range(9))
     
 @dataclass
@@ -33,10 +33,10 @@ class cnpj:
         if len(cnpj) != 18 and len(cnpj) != 14:
             return print('Erro: CNPJ com tamanho inválido.')
         cnpj = cnpj.replace('.', '').replace('-', '').replace('/','') if len(cnpj) == 18 else cnpj
-        penultimo = cls.digito(cls.soma(cnpj, 1)%11)
-        ultimo = cls.digito(cls.soma(cnpj)%11)
+        penultimo = cls.__digito(cls.__soma(cnpj, 1)%11)
+        ultimo = cls.__digito(cls.__soma(cnpj)%11)
         return True if cnpj[12] + cnpj[13] == f'{penultimo}{ultimo}' else False
-    def digito(vare):
+    def __digito(vare):
         return 11-vare if vare >= 2 else 0
-    def soma(cnpj, add = 0, ref = '6543298765432'):
+    def __soma(cnpj, add = 0, ref = '6543298765432'):
         return sum(int(cnpj[i])*(int(ref[i+add])) for i in range(12))
