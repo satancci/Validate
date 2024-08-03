@@ -1,6 +1,6 @@
 def check(cpf):
     if len(cpf) != 14 and len(cpf) != 11:
-        return print('Erro: cpf com tamanho inválido.') 
+        return print('Erro: CPF com tamanho inválido.') 
     cpf = cpf.replace('.', '').replace('-', '') if len(cpf) == 14 else cpf
     penultimo = digito(soma(cpf)%11)
     ultimo = digito((soma(cpf, 1) + penultimo*2)%11)
