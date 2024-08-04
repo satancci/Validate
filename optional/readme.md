@@ -1,3 +1,3 @@
 # Aviso
 
-Este códigos não são necessários, mas, para caso queira um usar um validador de forma isolada e exclusiva, estarão disponível.
+Este códigos não são necessários, porém, para caso queira usar um validador de forma isolada e exclusiva, estarão disponível.
