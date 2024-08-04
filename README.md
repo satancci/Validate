@@ -16,7 +16,7 @@ Este projeto fornece um conjunto de ferramentas para validação de diversos tip
 
 ## Instalação
 
-Clone o repositório e instale usando `pip` (não há dependências necessárias):
+Clone o repositório e use:
 
 ```bash
 git clone https://github.com/satancci/autocheck.git
