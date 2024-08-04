@@ -29,19 +29,19 @@ O módulo de validação pode ser usado diretamente importando as classes para v
 from validator import cnpj, isbn, cpf, upc, ean
 
 # Validar CNPJ (Cadastro Nacional da Pessoa Jurídica)
-ex = "12.345.678/0001-95"
+ex = "12.345.678/0001-95" # com ou sem pontuação 
 print(cnpj.check(ex))  # Saída: True ou False
 
 # Validar CPF (Cadastro de Pessoas Físicas)
-ex = "123.456.789-09"
+ex = "123.456.789-09" # com ou sem pontuação
 print(cpf.check(ex))  # Saída: True ou False
 
 # Validar EAN (European Article Number)
-ex = "1234567890123"
+ex = "1234567890123"  
 print(ean.check(ex))  # Saída: True ou False
 
 # Validar ISBN (International Standard Book Number)
-ex = "978-3-16-148410-0"
+ex = "978-3-16-148410-0"  # com ou sem pontuação
 print(isbn.check(ex))  # Saída: True ou False
 
 # Validar UPC (Universal Product Code)
@@ -49,10 +49,10 @@ ex = "012345678912"
 print(upc.check(ex))  # Saída: True ou False
 
 # Validar listas e matrizes de códigos
-ex_lista = ["12.345.678/0001-95", "12.345.678/0001-96"]
+ex_lista = ["12.345.678/0001-95", "12.345.678/0001-96"]  # com ou sem pontuação
 print(cnpj.checklist(ex_lista))  # Saída: lista composta por elementos booleanos (True ou False)
 
-ex_matrix = [["1234567890123"], ["123456789012"]]
+ex_matrix = [["1234567890123"], ["123456789012"]]  # com ou sem pontuação
 print(ean.checkarray(ex_matrix))  # Saída: array bidimensional composta por elementos booleanos (True ou False)
 ```
 
