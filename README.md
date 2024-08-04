@@ -26,7 +26,7 @@ git clone https://github.com/satancci/autocheck.git
 O módulo de validação pode ser usado diretamente importando as classes para validar CNPJ, CPF, EAN, ISBN e UPC. Veja os exemplos abaixo para saber como usar as classes de validação.
 
 ```python
-from validator import cnpj, isbn, cpf, upc, ean
+from validate import cnpj, isbn, cpf, upc, ean
 
 # Validar CNPJ (Cadastro Nacional da Pessoa Jurídica)
 ex = "12.345.678/0001-95" # com ou sem pontuação 
